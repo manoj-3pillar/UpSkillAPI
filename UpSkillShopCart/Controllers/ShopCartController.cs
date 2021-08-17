@@ -96,6 +96,7 @@ namespace UpSkillShopCart.Controllers
                 return BadRequest("Invalid request body passed");
             else
             {
+                orderDetails.OrderStatus = Models.Enums.OrderStatus.InProcess;
                 var isOrderSaved = await _service.SaveOrder(orderDetails);
                 if (isOrderSaved <= 0)
                     return BadRequest("Order not saved");
