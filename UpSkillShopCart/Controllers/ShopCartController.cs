@@ -92,11 +92,16 @@ namespace UpSkillShopCart.Controllers
         [Route("SaveOrder")]
         public async Task<IActionResult> SaveOrder(OrderDetails orderDetails)
         {
-            var isOrderSaved = await _service.SaveOrder(orderDetails);
-            if (isOrderSaved <= 0)
-                return BadRequest("Order not saved");
+            if (orderDetails == null)
+                return BadRequest("Invalid request body passed");
             else
-                return Ok(isOrderSaved);
+            {
+                var isOrderSaved = await _service.SaveOrder(orderDetails);
+                if (isOrderSaved <= 0)
+                    return BadRequest("Order not saved");
+                else
+                    return Ok(isOrderSaved);
+            }
         }
 
         [HttpGet]
