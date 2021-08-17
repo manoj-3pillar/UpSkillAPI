@@ -12,6 +12,7 @@ namespace UpSkillShopCart.Services
     {
         private List<ProductData> productList;
         private List<CartData> cartList;
+        private List<OrderDetails> orders;
 
         public Service()
         {
@@ -44,6 +45,7 @@ namespace UpSkillShopCart.Services
             };
 
             cartList = new List<CartData>();
+            orders = new List<OrderDetails>();
         }
 
         public async Task<int> GetCount(int count)
@@ -70,6 +72,7 @@ namespace UpSkillShopCart.Services
                 if (cartInformation.CartID == null)
                 {
                     cartInformation.CartID = new Guid();
+                    cartData.ProductDataList = new List<ProductData>();
                     cartData.ProductDataList.Add(productToBeAddedInCart);
                 }
                 else
@@ -113,9 +116,21 @@ namespace UpSkillShopCart.Services
             return cartList.Where(c => c.ID == cartID)?.FirstOrDefault();
         }
 
-        //public async Task SaveOrder(OrderDetails orderDetails)
-        //{
-        //    var cartItemsToBeOrdered = 
-        //}
+        public async Task<int> SaveOrder(OrderDetails orderDetails)
+        {
+            var productToBeOrdered = productList.Join(orderDetails.ProductList, p => p.ID, o => o.ID, (p, o) => new ProductData { ID = p.ID, Description = p.Description, Name = p.Name, QuantityForCart = o.QuantityForCart });
+            if (productToBeOrdered.Count() != productList.Count())
+                return 0;
+            else
+            {
+                orders.Add(orderDetails);
+                return 1;   
+            }
+        }
+
+        public async Task<OrderDetails> GetOrderDetails(Guid orderID)
+        {
+            return orders.FirstOrDefault(o => o.ID == orderID);
+        }
     }
 }

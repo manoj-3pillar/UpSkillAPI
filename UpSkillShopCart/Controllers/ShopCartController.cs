@@ -87,5 +87,27 @@ namespace UpSkillShopCart.Controllers
             else
                 return Ok(cartList);
         }
+
+        [HttpPost]
+        [Route("SaveOrder")]
+        public async Task<IActionResult> SaveOrder(OrderDetails orderDetails)
+        {
+            var isOrderSaved = await _service.SaveOrder(orderDetails);
+            if (isOrderSaved <= 0)
+                return BadRequest("Order not saved");
+            else
+                return Ok(isOrderSaved);
+        }
+
+        [HttpGet]
+        [Route("orderDetails/{orderID}")]
+        public async Task<IActionResult> GetOrderDetails(Guid orderID)
+        {
+            var orderDetails = await _service.GetOrderDetails(orderID);
+            if (orderDetails == null)
+                return BadRequest("Order ID is invalid");
+            else
+                return Ok(orderDetails);
+        }
     }
 }

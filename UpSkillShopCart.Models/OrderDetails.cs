@@ -10,8 +10,8 @@ namespace UpSkillShopCart.Models
     public class OrderDetails
     {
         public Guid ID { get; set; }
-        public Guid CartID { get; set; }
-        public string ProductName { get; set; }
+        public Guid UserID { get; set; }
+        public List<ProductData> ProductList { get; set; }
         public OrderStatus OrderStatus { get; set; }
     }
 }

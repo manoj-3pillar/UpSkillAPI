@@ -14,5 +14,7 @@ namespace UpSkillShopCart.Interfaces
         Task<int> AddToCart(CartInformation cartInformation);
         Task<bool> DeleteFromCartByProdID(/*int userID,*/ Guid productID);
         Task<CartData> GetCartDetails(Guid cartID);
+        Task<int> SaveOrder(OrderDetails orderDetails);
+        Task<OrderDetails> GetOrderDetails(Guid orderID);
     }
 }
