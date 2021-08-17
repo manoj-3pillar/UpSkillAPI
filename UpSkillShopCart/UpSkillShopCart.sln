@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSkillShopCart", "UpSkillShopCart.csproj", "{3DC3D004-2B68-449B-B681-364D06F57FCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSkillShopCart.Models", "..\UpSkillShopCart.Models\UpSkillShopCart.Models.csproj", "{024808F9-8277-4C21-AEA7-44C91007A9EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSkillShopCart.Services", "..\UpSkillShopCart.Services\UpSkillShopCart.Services.csproj", "{D972800B-9D1C-45E4-BCBA-6450E84DEE44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpSkillShopCart.Interfaces", "..\UpSkillShopCart.Interfaces\UpSkillShopCart.Interfaces.csproj", "{9BCB3341-EB43-4197-9FCA-2B553753F5F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{3DC3D004-2B68-449B-B681-364D06F57FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DC3D004-2B68-449B-B681-364D06F57FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DC3D004-2B68-449B-B681-364D06F57FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024808F9-8277-4C21-AEA7-44C91007A9EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024808F9-8277-4C21-AEA7-44C91007A9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024808F9-8277-4C21-AEA7-44C91007A9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024808F9-8277-4C21-AEA7-44C91007A9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D972800B-9D1C-45E4-BCBA-6450E84DEE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D972800B-9D1C-45E4-BCBA-6450E84DEE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D972800B-9D1C-45E4-BCBA-6450E84DEE44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D972800B-9D1C-45E4-BCBA-6450E84DEE44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCB3341-EB43-4197-9FCA-2B553753F5F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCB3341-EB43-4197-9FCA-2B553753F5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCB3341-EB43-4197-9FCA-2B553753F5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCB3341-EB43-4197-9FCA-2B553753F5F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

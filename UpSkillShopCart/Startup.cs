@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using UpSkillShopCart.Interfaces;
+using UpSkillShopCart.Services;
 
 namespace UpSkillShopCart
 {
@@ -26,6 +28,7 @@ namespace UpSkillShopCart
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddScoped<IService, Service>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

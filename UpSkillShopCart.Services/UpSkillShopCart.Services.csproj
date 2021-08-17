@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UpSkillShopCart.Interfaces\UpSkillShopCart.Interfaces.csproj" />
+    <ProjectReference Include="..\UpSkillShopCart.Models\UpSkillShopCart.Models.csproj" />
+  </ItemGroup>
+
+</Project>
