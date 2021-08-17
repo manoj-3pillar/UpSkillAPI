@@ -4,8 +4,9 @@ namespace UpSkillShopCart.Models
 {
     public class ProductData
     {
-        Guid ID { get; set; }
-        string Name { get; set; }
-        string Description { get; set; }
+        public Guid ID { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int QuantityForCart { get; set; }
     }
 }
