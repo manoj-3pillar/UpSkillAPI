@@ -28,7 +28,7 @@ namespace UpSkillShopCart
             {
                 configuration.RootPath = "ClientApp/dist";
             });
-            services.AddScoped<IService, Service>();
+            services.AddSingleton<IService, Service>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
