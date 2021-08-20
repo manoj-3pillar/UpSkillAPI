@@ -23,12 +23,6 @@ namespace UpSkillShopCart.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
-        {
-            return Ok(await _service.GetCount(10));
-        }
-
-        [HttpGet]
         [Route("products")]
         public async Task<IActionResult> GetAllProducts()
         {

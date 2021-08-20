@@ -22,35 +22,41 @@ namespace UpSkillShopCart.Services
                 {   
                     ID = new Guid("fc014793-75c1-49a4-882e-dfb560986011"),
                     Name = "Laptop",
-                    Description = "Laptop Description"
+                    Description = "Laptop Description",
+                    QuantityForCart = 10
                 },
                 new ProductData
                 {
                     ID = new Guid("fc014793-75c1-49a4-882e-dfb560986012"),
                     Name = "Mobile",
-                    Description = "Mobile Description"
+                    Description = "Mobile Description",
+                    QuantityForCart = 10
                 },
                 new ProductData
                 {
                     ID = new Guid("fc014793-75c1-49a4-882e-dfb560986013"),
                     Name = "Tablet",
-                    Description = "Tablet Description"
+                    Description = "Tablet Description",
+                    QuantityForCart = 10
                 },
                 new ProductData
                 {
                     ID = new Guid("fc014793-75c1-49a4-882e-dfb560986014"),
                     Name = "Ipod",
-                    Description = "Ipod Description"
+                    Description = "Ipod Description",
+                    QuantityForCart = 10
+                },
+                new ProductData
+                {
+                    ID = new Guid("fc014793-75c1-49a4-882e-dfb560986015"),
+                    Name = "Television",
+                    Description = "Television Description",
+                    QuantityForCart = 10
                 },
             };
 
             cartList = new List<CartData>();
             orders = new List<OrderDetails>();
-        }
-
-        public async Task<int> GetCount(int count)
-        {
-            return count;
         }
         
         public async Task<List<ProductData>> GetProducts()

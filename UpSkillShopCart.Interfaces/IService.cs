@@ -8,7 +8,6 @@ namespace UpSkillShopCart.Interfaces
 {
     public interface IService
     {
-        Task<int> GetCount(int count);
         Task<List<ProductData>> GetProducts();
         Task<ProductData> GetProductDetails(Guid productID);
         Task<int> AddToCart(CartInformation cartInformation);
